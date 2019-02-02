@@ -1,6 +1,6 @@
 ![logo](_media/logo-hi.png)
 
-# Helical Insight <small>2.0.0.0 CE</small>
+# Helical Insight <small>2.0.0.1 CE</small>
 
 > Community Edition.
 
@@ -9,5 +9,5 @@
 - Licensed under Apache 2.0 
 
 
-[GitHub](https://github.com/helicalinsight/helicalinsight)
+[GitHub](https://github.com/bireports/helicalinsight)
 [Get Started](#helical-insight)

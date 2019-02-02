@@ -30,7 +30,7 @@ Set `coverpage` to **true**, and create a `_coverpage.md`:
 - No statically built html files
 - Multiple themes
 
-[GitHub](https://www.github.com/helicalinsight/helicalinsight)
+[GitHub](https://www.github.com/bireports/helicalinsight)
 [Get Started](#docsify)
 ```
 
@@ -45,7 +45,7 @@ The background color is generated randomly by default. You can customize the bac
 
 # docsify <small>3.5</small>
 
-[GitHub](https://www.github.com/helicalinsight/helicalinsight)
+[GitHub](https://www.github.com/bireports/helicalinsight)
 [Get Started](#quick-start)
 
 <!-- background image -->
