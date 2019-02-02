@@ -86,7 +86,7 @@
                         <li>New generation UI with one click access.</li>
                         <li>Exporting and printing bugs fixed.</li>
                         <li>Direct links to tutorials.</li>
-                        <li class="github-link"><a target="_blank" href="https://github.com/helicalinsight/helicalinsight">Github</a></li>
+                        <li class="github-link"><a target="_blank" href="https://github.com/bireports/helicalinsight">Github</a></li>
                     </ul>
                 </div>
             </div>
