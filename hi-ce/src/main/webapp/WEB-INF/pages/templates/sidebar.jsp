@@ -12,12 +12,12 @@
                        aria-controls="getting-started">
                         <i class="flaticon-play-button-1"></i> Getting Started</a>
                     <ul class="collapse" id="getting-started">
-                        <li><a href="https://helicalinsight.github.io/helicalinsight/#/quickstart" target="_blank">
+                        <li><a href="https://bireports.github.io/helicalinsight/#/quickstart" target="_blank">
                             Helical insight</a></li>
-                        <li><a href="https://helicalinsight.github.io/helicalinsight/#/user-role-management" target="_blank">
+                        <li><a href="https://bireports.github.io/helicalinsight/#/user-role-management" target="_blank">
                             User & role management</a></li>
 
-                        <li><a href="https://helicalinsight.github.io/helicalinsight/#/ui-introduction"
+                        <li><a href="https://bireports.github.io/helicalinsight/#/ui-introduction"
                                target="_blank">
                             UI Introduction </a></li>
                     </ul>
@@ -28,21 +28,21 @@
                        aria-controls="connecting-data">
                         <i class="flaticon-play-button-1"></i> Connecting to Data</a>
                     <ul class="collapse" id="connecting-data">
-                        <li><a href="https://helicalinsight.github.io/helicalinsight/#/connecting-to-datasource"
+                        <li><a href="https://bireports.github.io/helicalinsight/#/connecting-to-datasource"
                                target="_blank">
                             Connecting to a data source </a></li>
-                        <li><a href="https://helicalinsight.github.io/helicalinsight/#/view-edit-datasources"
+                        <li><a href="https://bireports.github.io/helicalinsight/#/view-edit-datasources"
                                target="_blank">
                             View & edit existing data sources </a></li>
                     </ul>
 
                 </li>
                 <li>
-                    <a target="_blank" href="https://helicalinsight.github.io/helicalinsight/#/create-efw-report">
+                    <a target="_blank" href="https://bireports.github.io/helicalinsight/#/create-efw-report">
                         <i class="flaticon-play-button-1"></i> Creating Reports</a>
                 </li>
                 <li>
-                    <a target="_blank" href="https://helicalinsight.github.io/helicalinsight/"> <i class="flaticon-play-button-1"></i>
+                    <a target="_blank" href="https://bireports.github.io/helicalinsight/"> <i class="flaticon-play-button-1"></i>
                         Learn More</a>
                 </li>
             </ul>
