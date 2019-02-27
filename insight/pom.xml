@@ -3,9 +3,9 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>hi-ce</artifactId>
+    <artifactId>insight</artifactId>
     <packaging>war</packaging>
-    <name>hi-ce</name>
+    <name>insight</name>
     <properties>
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
         <zeroturnaround.version>1.9</zeroturnaround.version>
@@ -94,7 +94,7 @@
 <!--This plugin is not required while building the war file and can be skipped-->
             <!--<plugin>
                 <groupId>com.helicalinsight</groupId>
-                <artifactId>hi-ce-svn-number</artifactId>
+                <artifactId>insight-svn-number</artifactId>
                 <version>2.0</version>
 
                 <configuration>
@@ -130,42 +130,42 @@
         <!--Add your dependencies here-->
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-cache</artifactId>
+            <artifactId>bi-cache</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-core</artifactId>
+            <artifactId>bi-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-export</artifactId>
+            <artifactId>bi-export</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-externalauth</artifactId>
+            <artifactId>bi-externalauth</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-hwf</artifactId>
+            <artifactId>bi-hwf</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-scheduling</artifactId>
+            <artifactId>bi-scheduling</artifactId>
             <version>${project.version}</version>
         </dependency>
 		 <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-vf-plugin</artifactId>
+            <artifactId>bi-vf-plugin</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-validation</artifactId>
+            <artifactId>bi-validation</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

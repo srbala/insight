@@ -48,10 +48,10 @@ Browser Name : Google Chrome, Firefox, Internet Explorer, Microsoft Edge, etc.
 	
 1. Download ZIP from github and extract project.
 2. Open Eclipse IDE and Open the project from file System.
-3. After importing project from file system open hi-ce/pom.xml
+3. After importing project from file system open insight/pom.xml
 4. In pom.xml file check for "production" profile.
 5. In the said profile configure systemDirectory, logLocation, dbPort, dbServer, dbUser, dbPassword then save the xml file.
-6. Run hi-ce module as server. 
+6. Run insight module as server. 
 
 
 ## Helical Insight Installation
@@ -82,7 +82,7 @@ In order to run Tomcat or any other application server you may need to set `JAVA
 * docs
 * export
 * externalauth
-* hi-ce
+* insight
 * hi-repository
 * hwf
 * resources
@@ -104,7 +104,7 @@ In order to run Tomcat or any other application server you may need to set `JAVA
 	* For example :  /home/helicalinsight-master/hi-repository
 
 ##### Steps :
-1. Install the sql file `db.sql`, and `SampleTravelData.sql` present in db-dump folder. This contains the database required for `hi-ce` application and sample reports.
+1. Install the sql file `db.sql`, and `SampleTravelData.sql` present in db-dump folder. This contains the database required for `insight` application and sample reports.
 
 	```text
 	*\db-dump\SampleData.sql
@@ -133,14 +133,14 @@ In order to run Tomcat or any other application server you may need to set `JAVA
    `<efwSolution>/home/user/helicalinsight-master/hi-repository</efwSolution>`
 
    Find the tag `<BaseUrl><\BaseUrl>`. By default there is no value. You need to set this value to the ip/domain configuration along with the hi path.
-	For example, if you have placed the tomcat in www.yourdomain.com/hi then the base URL will be `<BaseUrl>http://www.yourdomain.com/hi-ce/hi.html<\BaseUrl>`
+	For example, if you have placed the tomcat in www.yourdomain.com/hi then the base URL will be `<BaseUrl>http://www.yourdomain.com/insight/hi.html<\BaseUrl>`
 	In case of IP based configuration the above may be your format:   `http://<yourip>:<port>/hi`
 
-	* Example: `<BaseUrl>http://192.168.2.1:8080/hi-ce/hi.html<\BaseUrl>`
+	* Example: `<BaseUrl>http://192.168.2.1:8080/insight/hi.html<\BaseUrl>`
 
 3. For Editing the connection details:
 
-	3.1. Go to `*\hi-ce\hi-repository\System\Admin`.
+	3.1. Go to `*\insight\hi-repository\System\Admin`.
 
 	3.2. Open `globalConnections.xml`
 
@@ -152,12 +152,12 @@ In order to run Tomcat or any other application server you may need to set `JAVA
 
      ![manualinstallation5](_media/Installation/manualinstallation5.png)
 
-  !>NOTE: This can also be done using hi-ce application by editing the datasource connection.
+  !>NOTE: This can also be done using insight application by editing the datasource connection.
 
-4. Make sure that Tomcat (or any other application server you have) is up and running, then follow below steps. Copy `hi-ce` war file present in `<project-path>\helicalinsight-master\hi-ce\target` to
-    `{TOMCAT-HOME}\webapps` folder. After a few seconds, you can see Tomcat has created one folder with the same name as that of the copied war file. For example, after deploying hi-ce.war file, a folder with name hi-ce would have been created in the same location.		
+4. Make sure that Tomcat (or any other application server you have) is up and running, then follow below steps. Copy `insight` war file present in `<project-path>\helicalinsight-master\insight\target` to
+    `{TOMCAT-HOME}\webapps` folder. After a few seconds, you can see Tomcat has created one folder with the same name as that of the copied war file. For example, after deploying insight.war file, a folder with name insight would have been created in the same location.		
 
-5. In case of linux environment one needs to have write permissions to change the files that we are going to discuss now. Open              `{TOMCAT_HOME}\webapps\hi-ce\WEB-INF\classes\project.properties` file with any text editor.		
+5. In case of linux environment one needs to have write permissions to change the files that we are going to discuss now. Open              `{TOMCAT_HOME}\webapps\insight\WEB-INF\classes\project.properties` file with any text editor.		
  5.1. Find `settingPath` parameter and replace it with the location of `setting.xml` which is present in System directory.
      Format:    settingPath = {setting.xml Location}
      Example:   settingPath = D:\\helicalinsight-master\\hi-repository\\System\\Admin\\setting.xml
@@ -184,7 +184,7 @@ In order to run Tomcat or any other application server you may need to set `JAVA
 
 6. Set Log file location
 
- 6.1 Open `{TOMCAT_HOME}\webapps\hi-ce\WEB-INF\classes\log4j.properties` file in any text editor.
+ 6.1 Open `{TOMCAT_HOME}\webapps\insight\WEB-INF\classes\log4j.properties` file in any text editor.
 
  6.2 Find `log4j.appender.file.File` parameter
 
@@ -198,7 +198,7 @@ In order to run Tomcat or any other application server you may need to set `JAVA
 
 The configuration shown below configures the Hibernate dialect for the database you are using incase of  MySQL as the database. If you are using some other database, please contact Helical for further assistance. Here configurations are shown for MySQL.
 
-  * Open `{TOMCAT_HOME}\webapps\hi-ce\WEB-INF\application-context.xml` file with any text editor.  
+  * Open `{TOMCAT_HOME}\webapps\insight\WEB-INF\application-context.xml` file with any text editor.  
 
   ![manualinstallation15](_media/Installation/manualinstallation15.png)  
 
@@ -313,9 +313,9 @@ The configuration shown below configures the Hibernate dialect for the database 
 
      Following the above steps complete the installation of the helical insight server. Restart your application server(Preferred) or reload the hi application in your application server manager. After that, you should be able to use the application by opening the browser and accessing at the
      ```text
-     URL:  http://{Your Server}:{Port}/hi-ce/hi.html
+     URL:  http://{Your Server}:{Port}/insight/hi.html
      ```
-     * For example: http://192.168.2.9:8080/hi-ce/hi.html
+     * For example: http://192.168.2.9:8080/insight/hi.html
 
      By default a user base with an organization called “Super Organization” that has two users hiadmin, hiuser is created.
 

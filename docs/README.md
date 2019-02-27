@@ -98,7 +98,7 @@ Steps:
 
 		Example: mvn install:install-file -Dfile=E:\helicalinsight-master\resources\tomcat-jdbc-7.0.65.jar -DgroupId=org.apache.tomcat -DartifactId=tomcat-jdbc -Dversion=7.0.65 -Dpackaging=jar
 
-3. Change the  below variables in the `pom.xml` present at location `<project-path>\helicalinsight-master\hi-ce` folder for configuring HI Repository , Log Location and Database credentials of the `hice` database.
+3. Change the  below variables in the `pom.xml` present at location `<project-path>\helicalinsight-master\insight` folder for configuring HI Repository , Log Location and Database credentials of the `hice` database.
 
 Where:
 
@@ -152,9 +152,9 @@ Please refer the below example to do changes for `production environment` in pom
 
 		Format for base URL is:
 
-		http://<ip_address>:<port_no>/hi-ce/hi.html
+		http://<ip_address>:<port_no>/insight/hi.html
 
-		Example:<BaseUrl>http://localhost:8080/hi-ce/hi.html</BaseUrl>
+		Example:<BaseUrl>http://localhost:8080/insight/hi.html</BaseUrl>
 		
 
 5.To view sample reports of hi-repository , import Sample Travel Data in your mysql database, present in github at location `helicalinsight/db-dump/SampleTravelData.sql`.
@@ -180,7 +180,7 @@ Please refer the below example to do changes for `production environment` in pom
 	<User>   : Username of database.
     <Pass>   : Password of database.
 
-7.Run the below command according to environment which builds the Helical Insight Community Edition project and creates the `hi-ce.war` file in target folder `<project-path>\helicalinsight-master\hi-ce\target`.
+7.Run the below command according to environment which builds the Helical Insight Community Edition project and creates the `insight.war` file in target folder `<project-path>\helicalinsight-master\insight\target`.
 
 
   Go to the Helical Insight project location and run the following command : 
@@ -197,12 +197,12 @@ Please refer the below example to do changes for `production environment` in pom
 
 8.Now Deploy the application on any webserver like Apache tomcat and access the application using above mention url.
 
-    http://<ip_address>:<port_no>/hi-ce/hi.html
+    http://<ip_address>:<port_no>/insight/hi.html
 
-Example: http://localhost:8080/hi-ce/hi.html
+Example: http://localhost:8080/insight/hi.html
 
 ## Directly deploy
-You may also directly deploy the `hi-ce.war` file in the application server from the `hi-ce/target` module
+You may also directly deploy the `insight.war` file in the application server from the `insight/target` module
 You need `tomcat` or any other server. Please follow the instructions given [here](https://bireports.github.io/helicalinsight/#/quickstart?id=manual-installation)
 
 ## Application Screenshots

@@ -11,7 +11,7 @@
 
     <modules>
         <!--War module-->
-        <module>hi-ce</module>
+        <module>insight</module>
         <!--War module-->
 
         <!--Core module-->
@@ -31,7 +31,7 @@
 
 
     <properties>
-        <parent.version>2.0.0.0-CE</parent.version>
+        <parent.version>2.0.0.1-CE</parent.version>
         <inceptionYear>2013</inceptionYear>
         <copyrightOwner>Helical IT Solutions (http://www.helicalinsight.com)</copyrightOwner>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

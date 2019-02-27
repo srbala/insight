@@ -4,7 +4,7 @@
     -->
     <!--<efwSolution>E:\CommunityEdition\presentation\src\test\resources\solution</efwSolution>-->
     <efwSolution>E:\helicalinsight-master\hi-repository</efwSolution>
-    <BaseUrl>http://localhost:8080/hi-ce/hi.html</BaseUrl>
+    <BaseUrl>http://localhost:8080/insight/hi.html</BaseUrl>
     <!-- The framework related files with extensions and configurable rules -->
     <Extentions>
         <!-- Only efw, efwsr, efwfav, efwresult files are shown in the file browser -->

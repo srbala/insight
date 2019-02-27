@@ -10,9 +10,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hi-export</artifactId>
+    <artifactId>bi-export</artifactId>
     <packaging>jar</packaging>
-    <name>hi-export</name>
+    <name>bi-export</name>
 
     <build>
         <finalName>${name}-${parent.version}</finalName>
@@ -27,17 +27,17 @@
     <dependencies>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-core</artifactId>
+            <artifactId>bi-core</artifactId>
             <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-cache</artifactId>
+            <artifactId>bi-cache</artifactId>
             <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-validation</artifactId>
+            <artifactId>bi-validation</artifactId>
             <version>${parent.version}</version>
         </dependency>
     </dependencies>

@@ -10,9 +10,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hi-scheduling</artifactId>
+    <artifactId>bi-scheduling</artifactId>
     <packaging>jar</packaging>
-    <name>hi-scheduling</name>
+    <name>bi-scheduling</name>
 
     <build>
         <finalName>${name}-${parent.version}</finalName>
@@ -27,17 +27,17 @@
     <dependencies>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-core</artifactId>
+            <artifactId>bi-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-export</artifactId>
+            <artifactId>bi-export</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.helicalinsight</groupId>
-            <artifactId>hi-hwf</artifactId>
+            <artifactId>bi-hwf</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
