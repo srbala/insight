@@ -39,6 +39,8 @@ We support all the JDBC4 complaint databases, NoSQL, Big Data, RDBMS, Cloud db, 
 * PostgreSQL
 * SQL Server
 * Oracle
+* DB2
+* Derby
 * Firebird
 * Informix
 * Ingres
@@ -56,6 +58,7 @@ We support all the JDBC4 complaint databases, NoSQL, Big Data, RDBMS, Cloud db, 
 * Hive
 * NuoDB
 * Neo4j
+* Oroin
 
 #### Cloud
 
@@ -88,17 +91,7 @@ Steps:
 
 1. Download the Helical Insight project from Helical Insight Github Page.
 
-2. Find the `hikaricp`, `tomcat-jdbc` jar files in the resources folder at `<project-path>\insight-master\resources` and then install it locally in your maven repository using command:
-
-		a. mvn install:install-file -Dfile={path/to/file} -DartifactId=HikariCP -Dversion=2.4.7-hi -Dpackaging=jar
-
-		Example: mvn install:install-file -Dfile=E:\insight-master\resources\HikariCP-2.4.7-hi.jar -DgroupId=com.zaxxer -DartifactId=HikariCP -Dversion=2.4.7-hi -Dpackaging=jar
-
-		b. mvn install:install-file -Dfile={path/to/file} -DgroupId=org.apache.tomcat -DartifactId=jdbc-pool -Dversion=7.0.65 -Dpackaging=jar
-
-		Example: mvn install:install-file -Dfile=E:\insight-master\resources\tomcat-jdbc-7.0.65.jar -DgroupId=org.apache.tomcat -DartifactId=tomcat-jdbc -Dversion=7.0.65 -Dpackaging=jar
-
-3. Change the  below variables in the `pom.xml` present at location `<project-path>\insight-master\insight` folder for configuring HI Repository , Log Location and Database credentials of the `hice` database.
+2. Change the  below variables in the `pom.xml` present at location `<project-path>\insight-master\insight` folder for configuring HI Repository , Log Location and Database credentials of the `hice` database.
 
 Where:
 
