@@ -1,94 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Insight Community Edition</title>
+  <title>docsify</title>
   <link rel="icon" href="_media/favicon.ico">
-  <meta name="keywords" content="helical insight, big data, business intelligence, bi, analytics,reports, charts, caching, exporting, pdf, png, jpeg, emailing, scheduling, cahcing, user management, apache2, maven, java, mysql, oracle, bigdata, hadoop, cassandra, spark, workflow, validation">
-  <meta name="description" content="Helical Insight is worlds first open source Business Intelligence framework. It is completely browser based solution and provides all the capabilities expected out of any BI tool like user role management, multi-tenant environment, exporting, email scheduling, device compatibility, Administration etc.">
+  <meta name="google-site-verificationx" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
+  <meta name="description" content="A magical documentation generator.">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsify/4.9.1/themes/vue.css" title="vue">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsify/4.9.1/themes/dark.css" title="dark" disabled>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsify/4.9.1/themes/buble.css" title="buble" disabled>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsify/4.9.1/themes/pure.css" title="pure" disabled>
-  
-  <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" title="vue">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dark.css" title="dark" disabled>
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/buble.css" title="buble" disabled>
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/pure.css" title="pure" disabled>
+  <script src="//unpkg.com/docsify-plugin-codefund/index.js"></script>
   <style>
     nav.app-nav li ul {
       min-width: 100px;
     }
-	* {
-		font-family: 'Questrial', sans-serif;
-	 }
-	 .markdown-section a,.sidebar li>p ,.sidebar ul li.active>a,.markdown-section blockquote p 
-	 {
-		font-weight: 400;
-	}
-	 	
-	 .sidebar ul li a 
-	 {
-    color: #5a5a5a;
-    font-size: 14px;
-	line-height:1.3;
-    }
-.sidebar li>p {
-    font-size: 16px;
-    color: #000;
-   }
   </style>
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+</head>
 
-  ga('create', 'UA-77351339-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-  
-  </head>
 <body>
   <div id="app">Loading ...</div>
-</body>
-<script>
-  window.$docsify = {
-    alias: {
-      '/changelog': 'https://raw.githubusercontent.com/bireports/insight/master/'
-    },
-    auto2top: true,
-    coverpage: true,
-    executeScript: true,
-    loadSidebar: true,
-    loadNavbar: true,
-    mergeNavbar: true,
-    maxLevel: 4,
-    name: 'Insight',
-    search: {
-      noData: {
-
-        '/': 'No results!'
+  <script>
+    window.$docsify = {
+      alias: {
+        '.*?/changelog': 'https://raw.githubusercontent.com/bireports/insight/master/CHANGELOG.md',
+        '/.*/_navbar.md': '/_navbar.md',
       },
-      paths: 'auto',
-      placeholder: {
+      auto2top: true,
+      coverpage: true,
+      executeScript: true,
+      loadSidebar: true,
+      loadNavbar: true,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      ga: 'UA-xxxxxxxx-1',
+      name: 'insight',
+      search: {
+        noData: {
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/': 'Search'
+        }
+      },
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            if (/githubusercontent\.com/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('raw.githubusercontent.com', 'github.com')
+                .replace(/\/master/, '/blob/master')
+            } else {
+              url = 'https://github.com/bireports/insight/blob/master/docs/' + vm.route.file
+            }
+            var editHtml = '[:memo: Edit Document](' + url + ')\n'
 
-        '/': 'Search'
-      }
-      
-    },
-    subMaxLevel: 2
-  }
-</script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/docsify/4.9.1/docsify.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/docsify/4.9.1/plugins/search.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-bash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markdown.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-nginx.min.js"></script>
-
+            return editHtml
+              + html
+              + '\n\n----\n\n'
+              + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+          })
+        },
+ 
+      ]
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
+  
+</body>
 
 </html>
