@@ -10,7 +10,7 @@ Helical Insight also comes with a unique Workflow rule engine, allowing you to c
 
 Use HTML skillset and Java skillset to add functionalities at the frontend and backend respectively.
 
-**Click [here](https://bireports.github.io/helicalinsight/#/quickstart) for quick installation guide.**
+**Click [here](https://bireports.github.io/insight/#/quickstart) for quick installation guide.**
 
 ## Features
 
@@ -88,23 +88,23 @@ Steps:
 
 1. Download the Helical Insight project from Helical Insight Github Page.
 
-2. Find the `hikaricp`, `tomcat-jdbc` jar files in the resources folder at `<project-path>\helicalinsight-master\resources` and then install it locally in your maven repository using command:
+2. Find the `hikaricp`, `tomcat-jdbc` jar files in the resources folder at `<project-path>\insight-master\resources` and then install it locally in your maven repository using command:
 
 		a. mvn install:install-file -Dfile={path/to/file} -DartifactId=HikariCP -Dversion=2.4.7-hi -Dpackaging=jar
 
-		Example: mvn install:install-file -Dfile=E:\helicalinsight-master\resources\HikariCP-2.4.7-hi.jar -DgroupId=com.zaxxer -DartifactId=HikariCP -Dversion=2.4.7-hi -Dpackaging=jar
+		Example: mvn install:install-file -Dfile=E:\insight-master\resources\HikariCP-2.4.7-hi.jar -DgroupId=com.zaxxer -DartifactId=HikariCP -Dversion=2.4.7-hi -Dpackaging=jar
 
 		b. mvn install:install-file -Dfile={path/to/file} -DgroupId=org.apache.tomcat -DartifactId=jdbc-pool -Dversion=7.0.65 -Dpackaging=jar
 
-		Example: mvn install:install-file -Dfile=E:\helicalinsight-master\resources\tomcat-jdbc-7.0.65.jar -DgroupId=org.apache.tomcat -DartifactId=tomcat-jdbc -Dversion=7.0.65 -Dpackaging=jar
+		Example: mvn install:install-file -Dfile=E:\insight-master\resources\tomcat-jdbc-7.0.65.jar -DgroupId=org.apache.tomcat -DartifactId=tomcat-jdbc -Dversion=7.0.65 -Dpackaging=jar
 
-3. Change the  below variables in the `pom.xml` present at location `<project-path>\helicalinsight-master\insight` folder for configuring HI Repository , Log Location and Database credentials of the `hice` database.
+3. Change the  below variables in the `pom.xml` present at location `<project-path>\insight-master\insight` folder for configuring HI Repository , Log Location and Database credentials of the `hice` database.
 
 Where:
 
-a)`<systemDirectory>` : This is the Helical Insight Report repository path , which contains all created reports and dashboards i.e. `<project-path>\helicalinsight-master\hi-repository`.
+a)`<systemDirectory>` : This is the Helical Insight Report repository path , which contains all created reports and dashboards i.e. `<project-path>\insight-master\hi-repository`.
 
-b)`<logLocation>` : Location of Helical Insight Application log file i.e, `<project-path>\helicalinsight-master\hi-repository\System\Logs`.
+b)`<logLocation>` : Location of Helical Insight Application log file i.e, `<project-path>\insight-master\hi-repository\System\Logs`.
 
 c) Database credentials like   
 
@@ -143,10 +143,10 @@ Please refer the below example to do changes for `production environment` in pom
 
 	a) Open the Helical Insights setting.xml file present at below location
 
-		Location: <project-path>\helicalinsight-master\hi-repository\System\Admin\
+		Location: <project-path>\insight-master\hi-repository\System\Admin\
 
     b) Find the <efwSolution> tag and change the value to your hi-repository path like :
-	   <efwSolution><project-path>\helicalinsight-master\hi-repository</efwSolution>
+	   <efwSolution><project-path>\insight-master\hi-repository</efwSolution>
 
     c) Find the <BaseUrl> tag and change the value with your base url
 
@@ -157,12 +157,12 @@ Please refer the below example to do changes for `production environment` in pom
 		Example:<BaseUrl>http://localhost:8080/insight/hi.html</BaseUrl>
 		
 
-5.To view sample reports of hi-repository , import Sample Travel Data in your mysql database, present in github at location `helicalinsight/db-dump/SampleTravelData.sql`.
+5.To view sample reports of hi-repository , import Sample Travel Data in your mysql database, present in github at location `insight/db-dump/SampleTravelData.sql`.
 
 6.Update database details in sample reports in below files :
 
-    <project-path>\helicalinsight-master\hi-repository\Sample Reports\Sample EFW Dashboard\sample_dashboard.efwd
-    <project-path>\helicalinsight-master\hi-repository\Sample Reports\Travel Dashboard\travel_dashboard.efwd
+    <project-path>\insight-master\hi-repository\Sample Reports\Sample EFW Dashboard\sample_dashboard.efwd
+    <project-path>\insight-master\hi-repository\Sample Reports\Travel Dashboard\travel_dashboard.efwd
 	
 	
 	<DataSources>
@@ -180,7 +180,7 @@ Please refer the below example to do changes for `production environment` in pom
 	<User>   : Username of database.
     <Pass>   : Password of database.
 
-7.Run the below command according to environment which builds the Helical Insight Community Edition project and creates the `insight.war` file in target folder `<project-path>\helicalinsight-master\insight\target`.
+7.Run the below command according to environment which builds the Helical Insight Community Edition project and creates the `insight.war` file in target folder `<project-path>\insight-master\insight\target`.
 
 
   Go to the Helical Insight project location and run the following command : 
@@ -203,7 +203,7 @@ Example: http://localhost:8080/insight/hi.html
 
 ## Directly deploy
 You may also directly deploy the `insight.war` file in the application server from the `insight/target` module
-You need `tomcat` or any other server. Please follow the instructions given [here](https://bireports.github.io/helicalinsight/#/quickstart?id=manual-installation)
+You need `tomcat` or any other server. Please follow the instructions given [here](https://bireports.github.io/insight/#/quickstart?id=manual-installation)
 
 ## Application Screenshots
 
@@ -231,14 +231,6 @@ Check out the Demos to Helical Insight in use.
 
 * [Miscellaneous Use Cases](http://www.helicalinsight.com/miscellaneous-use-cases/)
 
-## Try Enterprise Edition
-
-Helical Insight Enterprise Edition comes with many addon features like self-service interface for reports and dashboards creation, multi tenancy, machine learning and NLP, UI driven workflow etc.
-
-Try Now [Download Free Trial.](http://www.helicalinsight.com/register/)
-
 ## License
-
-Copyright (c) Helical Insight. All rights reserved.
 
 Licensed under the Apache License.

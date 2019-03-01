@@ -9,5 +9,5 @@
 - Licensed under Apache 2.0 
 
 
-[GitHub](https://github.com/bireports/helicalinsight)
+[GitHub](https://github.com/bireports/insight)
 [Get Started](#helical-insight)

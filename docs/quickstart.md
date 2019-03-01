@@ -2,7 +2,7 @@
 
 It is recommended to install Helical Insight Community Edition from official website.
 
-[Download Helical Insight Community Edition Here](http://www.helicalinsight.com/helical-insight-ce/)
+[Download Helical Insight Community Edition Here](https://bireports.github.io/insight/)
 
 ## Product Details
 
@@ -160,7 +160,7 @@ In order to run Tomcat or any other application server you may need to set `JAVA
 5. In case of linux environment one needs to have write permissions to change the files that we are going to discuss now. Open              `{TOMCAT_HOME}\webapps\insight\WEB-INF\classes\project.properties` file with any text editor.		
  5.1. Find `settingPath` parameter and replace it with the location of `setting.xml` which is present in System directory.
      Format:    settingPath = {setting.xml Location}
-     Example:   settingPath = D:\\helicalinsight-master\\hi-repository\\System\\Admin\\setting.xml
+     Example:   settingPath = D:\\insight-master\\hi-repository\\System\\Admin\\setting.xml
 
       ![manualinstallation10](_media/Installation/manualinstallation10.png)
 
@@ -328,4 +328,3 @@ The configuration shown below configures the Hibernate dialect for the database 
     password: hiuser
  ```
 
- In case of issue in installing the software, reach out to us at support@helicalinsight.com  

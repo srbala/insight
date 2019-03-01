@@ -16,5 +16,4 @@
 - Guide
   - [Support](support.md)
   - [Feature Request](roadmap.md)
-  - [Try Enterprise Edition](http://www.helicalinsight.com/register/)
 
