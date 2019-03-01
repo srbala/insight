@@ -1,8 +1,8 @@
 # Quick start
 
-It is recommended to install Helical Insight Community Edition from official website.
+It is recommended to install Insight from official website.
 
-[Download Helical Insight Community Edition Here](https://bireports.github.io/insight/)
+[Download Insight Here](https://github.com/bireports/insight/)
 
 ## Product Details
 
