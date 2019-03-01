@@ -1,6 +1,3 @@
-## Helical Insight
-
-&gt; Community driven innovation via Helical Insight CE.
 
 ## What is it
 
