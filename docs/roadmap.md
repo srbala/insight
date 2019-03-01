@@ -34,9 +34,6 @@ The user can sort the scheduled reports in the scheduler table
 
 
 
-
 # Request a new feature 
  
-[Please mail us at ''](mailto:'')
-
 You can also raise feature request in issues section of github with label `feature request`
