@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -95,7 +95,12 @@ public class ApplicationDefaultUsersInitializer implements ApplicationContextAwa
             user.setRoles(allRoles);
             this.userService.addUser(user);
 
-            this.roleService.add(new Role(rolePhantom));
+            String[] split = rolePhantom.split(",");
+            for(String s: split) {
+                Role byName = this.roleService.findByName(s);
+                if(byName==null)
+                this.roleService.add(new Role(s));
+            }
 
             Role userRole = this.roleService.findByName(roleUser);
             List<Role> userRoleList = new ArrayList<>();
@@ -108,9 +113,13 @@ public class ApplicationDefaultUsersInitializer implements ApplicationContextAwa
             user.setRoles(userRoleList);
             userService.addUser(user);
 
-            Role phantomRole = this.roleService.findByName(rolePhantom);
+
             List<Role> phantomRoleList = new ArrayList<>();
-            phantomRoleList.add(phantomRole);
+            for(String s: split) {
+                Role phantomRole = this.roleService.findByName(s);
+                phantomRoleList.add(phantomRole);
+            }
+
             String rolePhantomName = this.applicationDefaultUserAndRoleNamesConfigurer.getRolePhantomName();
             user.setUsername(rolePhantomName);
             user.setPassword(rolePhantomName);

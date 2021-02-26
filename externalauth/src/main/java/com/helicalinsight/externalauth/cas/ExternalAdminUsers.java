@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import java.util.List;
 
 /**
  * @author Somen
+ *         Created on 3/8/2016.
  */
 public class ExternalAdminUsers {
 

@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import com.helicalinsight.efw.resourceloader.rules.IResourceSecurityRule;
 import com.helicalinsight.efw.utility.ResourcePermissionLevelsHolder;
 import net.sf.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -66,12 +67,16 @@ public final class FileResourcePermission implements IResourcePermission {
             } else {
                 //Security is present but not shared.
                 if (!isShareTagPresent) {
-                    return this.resourcePermissionLevelsHolder.noAccessLevel();
+                    if (fileAsJson.has("absolutePath")) {
+                        return SecurityUtils.maxInheritPermission(new File(fileAsJson.getString("absolutePath")));
+                    } else
+                        return this.resourcePermissionLevelsHolder.noAccessLevel();
                 }
             }
         }
 
         final JSONObject shareJson = this.fileAsJson.getJSONObject("share");
+        //User organization may be null
         final boolean isResourceSharedWithOtherRoles = ShareRuleHelper.isResourceSharedWithOtherRoles(shareJson);
         final boolean isResourceSharedWithUsers = ShareRuleHelper.isResourceSharedWithUsers(shareJson);
 
@@ -89,10 +94,18 @@ public final class FileResourcePermission implements IResourcePermission {
 
 
         if (!permissions.isEmpty()) {
-            return Collections.max(permissions);
+            Integer max = Collections.max(permissions);
+            if (max == -1) {
+                if (fileAsJson.has("absolutePath")) {
+                    return SecurityUtils.maxInheritPermission(new File(fileAsJson.getString("absolutePath")));
+                }
+            }
+            return max;
         }
 
         //Return no access level. Empty share tag.
         return this.resourcePermissionLevelsHolder.noAccessLevel();
     }
+
+
 }

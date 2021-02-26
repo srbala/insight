@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -49,6 +49,7 @@ public class CasUserDetailService extends UserDetailsServiceImpl {
     @Autowired
     private RoleService roleService;
 
+
     @Autowired
     @Qualifier(value = "userDetailsService")
     private UserService userService;
@@ -95,6 +96,8 @@ public class CasUserDetailService extends UserDetailsServiceImpl {
             roleUser = namesConfigurer.getRoleUser();
             userRole = roleService.findRoleByName(roleUser);
         }
+
+
 
         List<Role> userRoleList = new ArrayList<>();
         userRoleList.add(userRole);

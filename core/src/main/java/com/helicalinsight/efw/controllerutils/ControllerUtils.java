@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -363,4 +363,28 @@ public class ControllerUtils {
         }
         return parameter;
     }
+    public static void replaceFilePath(JSONArray resourceArray) {
+
+
+        for (Object jsonObject : resourceArray) {
+            JSONObject resourceJson = (JSONObject) jsonObject;
+            if (resourceJson.has("children")) {
+                JSONArray children = resourceJson.getJSONArray("children");
+                if (!children.isEmpty()) {
+                    replaceFilePath(children);
+                }
+            } else {
+                String type = resourceJson.getString("type");
+                String path = resourceJson.getString("path");
+                if ("file".equalsIgnoreCase(type)) {
+                    resourceJson.put("path", path.replaceAll("\\\\", "/"));
+                    resourceJson.discard("absolutepath");
+
+
+                }
+            }
+
+        }
+    }
+
 }

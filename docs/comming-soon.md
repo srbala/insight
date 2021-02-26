@@ -3,9 +3,8 @@
 
 On downloading the Helical Insight installer file, following are the steps to install the application. During installation please select an empty folder. 
 
-
 ##### Prerequisites :
-* Java version `1.7` or higher
+* Java version `1.8` or higher
 * User should have `administrator privilege`.
 * If multiple Java versions are installed, then the user need to set `JRE_HOME` / `JAVA_HOME` environment variables [learn to set environment variables ](http://www.helicalinsight.com/technical-guide/configure-java-environment-variables/)
 * The RAM should be minimum of `500 MB` or higher
@@ -75,7 +74,7 @@ For super user :: hiuser / hiuser
 Following are the steps to install a Helical Insight Binary on a Linux Machine.
 
 ##### Prerequisites :
-* Java version `1.7` or higher
+* Java version `1.8`
 * The user should have `root permission`
 * The RAM should be minimum of `500 MB` or higher 
 
@@ -123,6 +122,5 @@ Following are the Default userid and password:
 For Admin :: hiadmin / hiadmin
 For super user :: hiuser / hiuser
 ```
-
 
 ## Mac

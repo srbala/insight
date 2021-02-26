@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -158,7 +158,7 @@ public class ShareRuleXmlUpdateHandler implements IComponent {
                 file = files[0].getName();
                 String id = formData.getString("id");
                 File efwdFile = new File(solutionDirectory + File.separator + dir + File.separator + file);
-                DataSourceSecurityUtility.checkEfwdPermission(id, efwdFile, DataSourceSecurityUtility.WRITE);
+                DataSourceSecurityUtility.checkEfwdPermission(id, efwdFile, DataSourceSecurityUtility.READ_WRITE);
                 DocumentBuilder documentBuilder = XmlUtils.getDocumentBuilder();
                 Document document = documentBuilder.newDocument();
 
@@ -246,6 +246,9 @@ public class ShareRuleXmlUpdateHandler implements IComponent {
 
             if (share != null) {
                 iResource.setShare(share);
+                if(share.getRoles()==null && share.getUsers()==null){
+                    iResource.setShare(null);
+                }
                 synchronized (this) {
                     JaxbUtils.marshal(iResource, resource);
                 }

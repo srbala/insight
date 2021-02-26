@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 package com.helicalinsight.admin.management;
 
+import com.helicalinsight.efw.components.DataSourceSecurityUtility;
 import com.helicalinsight.efw.components.EfwdReaderUtility;
 import com.helicalinsight.efw.components.GlobalXmlReaderUtility;
 import com.helicalinsight.efw.framework.utils.ApplicationContextAccessor;
@@ -58,7 +59,7 @@ public class DataSourceCountProvider implements IComponent {
 
         GlobalXmlReaderUtility globalXmlReaderUtility = ApplicationContextAccessor.getBean
                 (GlobalXmlReaderUtility.class);
-        globalXmlReaderUtility.addDataSources(dataSources);
+        globalXmlReaderUtility.addDataSources(dataSources, DataSourceSecurityUtility.READ);
         return dataSources.size();
     }
 

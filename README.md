@@ -1,6 +1,6 @@
 ## Helical Insight
 
-&gt; Community driven innovation via Helical Insight CE.
+Community driven innovation via Helical Insight CE.
 
 ## What is it
 
@@ -83,7 +83,7 @@ To build Helical Insight Community Edition project you need
 
  `NOTE: In case database is not accessed remotely then grant all priviledges to user.`
 
-*  Database with name `hice` to be created in Mysql.
+*  Database with name `hice` to be created in Mysql. Using file db.sql, present in github at location `helicalinsight/db-dump/db.sql`.
 
 Steps:
 
@@ -162,8 +162,14 @@ Please refer the below example to do changes for `production environment` in pom
 
 6.Update database details in sample reports in below files :
 
+<<<<<<< HEAD
     <project-path>\insight-master\hi-repository\Sample Reports\Sample EFW Dashboard\sample_dashboard.efwd
     <project-path>\insight-master\hi-repository\Sample Reports\Travel Dashboard\travel_dashboard.efwd
+=======
+    <project-path>\helicalinsight-master\hi-repository\Sample Reports\Sample EFW Dashboard\sample_dashboard.efwd
+    <project-path>\helicalinsight-master\hi-repository\Sample Reports\Travel Dashboard\travel_dashboard.efwd
+    <project-path>\helicalinsight-master\hi-repository\Sample Reports\1568094343090\d3b00d97-7864-41a4-ab67-c58abb3da198.efwd
+>>>>>>> 636de3c7b8abdeab6f0a99b5a53d08887397adcf
 	
 	
 	<DataSources>

@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -44,9 +44,11 @@ public class AuthenticationServiceDefault implements RestAuthenticationService {
 
     @Override
     public TokenInformationProvider authenticate(String login, String password) {
+        // Here principal=username, credentials=password
         Authentication authentication = new UsernamePasswordAuthenticationToken(login, password);
         try {
             authentication = authenticationManager.authenticate(authentication);
+            // Here principal=UserDetails (UserContext in our case), credentials=null (security reasons)
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
             if (authentication.getPrincipal() != null) {

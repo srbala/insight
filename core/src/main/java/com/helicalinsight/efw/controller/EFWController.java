@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -176,8 +176,13 @@ public class EFWController {
         }
         if (resource == null) {
             resource = "";
+
         }
-        return baseLoader.loadResources(resource, recursive);
+        String resourceString = baseLoader.loadResources(resource, recursive);
+        JSONArray resourceArr = JSONArray.fromObject(resourceString);
+        ControllerUtils.replaceFilePath(resourceArr);
+        return resourceArr.toString();
+
     }
 
     /**
@@ -466,6 +471,12 @@ public class EFWController {
         return page;
     }
 
+    @RequestMapping(value = "/mock/switchUser", method = {RequestMethod.GET, RequestMethod.POST})
+    public String switchUser(String page) {
+        return "switchUser";
+
+    }
+
 
     private boolean execute(HttpServletResponse response, File file, String extension, String clazz,
                             JSONObject contentJson) {
@@ -484,6 +495,8 @@ public class EFWController {
             return false;
         }
     }
+
+
 
     private String getPatternExtension(String pattern) {
         String[] strings = pattern.split(("\\.(?=[^\\.]+$)"));

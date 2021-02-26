@@ -1,5 +1,5 @@
 /**
- *    Copyright (C) 2013-2017 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
+ *    Copyright (C) 2013-2019 Helical IT Solutions (http://www.helicalinsight.com) - All rights reserved.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -33,7 +33,12 @@ public class TokenManagerSingle implements RestTokenManager {
 
     private Map<String, UserDetails> validUsers = new HashMap<>();
 
-       private Map<UserDetails, TokenInformationProvider> tokens = new HashMap<>();
+    /**
+     * This maps system users to tokens because equals/hashCode is delegated to User entity.
+     * This can store either one token or list of them for each user, depending on what you want to do.
+     * Here we store single token, which means, that any older tokens are invalidated.
+     */
+    private Map<UserDetails, TokenInformationProvider> tokens = new HashMap<>();
 
     @Override
     public TokenInformationProvider createNewToken(UserDetails userDetails) {
