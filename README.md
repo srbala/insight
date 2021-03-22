@@ -10,7 +10,7 @@ Helical Insight also comes with a unique Workflow rule engine, allowing you to c
 
 Use HTML skillset and Java skillset to add functionalities at the frontend and backend respectively.
 
-**Click [here](https://bireports.github.io/insight/#/quickstart) for quick installation guide.**
+**Click [here](https://srbala.com/insight/#/quickstart) for quick installation guide.**
 
 ## Features
 
@@ -210,7 +210,7 @@ Example: http://localhost:8080/insight/hi.html
 
 ## Directly deploy
 You may also directly deploy the `insight.war` file in the application server from the `insight/target` module
-You need `tomcat` or any other server. Please follow the instructions given [here](https://bireports.github.io/insight/#/quickstart?id=manual-installation)
+You need `tomcat` or any other server. Please follow the instructions given [here](https://srbala.com/insight/#/quickstart?id=manual-installation)
 
 ## Application Screenshots
 
