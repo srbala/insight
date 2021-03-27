@@ -162,15 +162,9 @@ Please refer the below example to do changes for `production environment` in pom
 
 6.Update database details in sample reports in below files :
 
-<<<<<<< HEAD
+
     <project-path>\insight-master\hi-repository\Sample Reports\Sample EFW Dashboard\sample_dashboard.efwd
     <project-path>\insight-master\hi-repository\Sample Reports\Travel Dashboard\travel_dashboard.efwd
-=======
-    <project-path>\helicalinsight-master\hi-repository\Sample Reports\Sample EFW Dashboard\sample_dashboard.efwd
-    <project-path>\helicalinsight-master\hi-repository\Sample Reports\Travel Dashboard\travel_dashboard.efwd
-    <project-path>\helicalinsight-master\hi-repository\Sample Reports\1568094343090\d3b00d97-7864-41a4-ab67-c58abb3da198.efwd
->>>>>>> 636de3c7b8abdeab6f0a99b5a53d08887397adcf
-	
 	
 	<DataSources>
         <Connection id="1" type="sql.jdbc">
