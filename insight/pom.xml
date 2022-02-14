@@ -7,8 +7,8 @@
     <packaging>war</packaging>
     <name>insight</name>
     <properties>
-        <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
-        <zeroturnaround.version>1.9</zeroturnaround.version>
+        <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+        <zeroturnaround.version>1.14</zeroturnaround.version>
         <mysql-connector-java.version>[8.0.16,)</mysql-connector-java.version>
         <hi.build.maven.plugin>${parent.version}</hi.build.maven.plugin>
 
