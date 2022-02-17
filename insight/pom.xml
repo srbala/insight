@@ -176,7 +176,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlets</artifactId>
-            <version>9.4.6.v20170531</version>
+            <version>[9.4.41,)</version>
         </dependency>
     </dependencies>
 </project>
