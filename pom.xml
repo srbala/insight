@@ -65,7 +65,7 @@
         <tomcat.jdbc.version>7.0.92</tomcat.jdbc.version>
 
         <maven-compiler-plugin.version>3.10.0</maven-compiler-plugin.version>
-        <spring-security-web.version>3.2.10.RELEASE</spring-security-web.version>
+        <spring-security-web.version>4.2.13.RELEASE</spring-security-web.version>
 
         <joda-time.version>2.10.13</joda-time.version>
         <guava.version>[24.1.1,)</guava.version>
